@@ -1,2 +1,2 @@
 # Config
-My system config file
+My system config file for Linux

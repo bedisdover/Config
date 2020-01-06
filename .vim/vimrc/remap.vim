@@ -1,20 +1,4 @@
 let g:mapleader = ','
-" function! HandleTab()
-"   if emmet#isExpandable()
-"     return emmet#expandAbbrIntelligent('\<TAB>')
-"   endif
-" endfunction
-
-" edit
-nnoremap xx dd
-nnoremap X D
-nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
-
-inoremap <silent><expr> <TAB>
-  \ pumvisible() ? coc#_select_confirm() :
-  \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-  \ <SID>check_back_space() ? "\<TAB>" :
-  \ coc#refresh()
 
 " vim-translate-me {{
   nmap <silent> <Leader>w <Plug>TranslateW
@@ -31,13 +15,12 @@ inoremap <silent><expr> <TAB>
       NERDTree
     endif
   endfunction
-  noremap <silent> <ESC>1 :call Toggle()<CR>
-  inoremap <silent> <ESC>1 <ESC>:call Toggle()<CR>
+  noremap <silent> <A-1> :call Toggle()<CR>
+  inoremap <silent> <A-1> <ESC>:call Toggle()<CR>
 " }}
 
-" emmet-vim {{
-  " let g:user_emmet_expandabbr_key='<Tab>'
-  " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" fzf {{
+  noremap <silent> <C-P> :GFiles<CR>
 " }}
 
 " coc.vim {{
@@ -65,9 +48,12 @@ inoremap <silent><expr> <TAB>
   nmap <silent> <C-d> <Plug>(coc-range-select)
   xmap <silent> <C-d> <Plug>(coc-range-select)
 
-  " nmap <silent> <C-S-L> :call CocAction('format')<CR>
-  " nmap <silent> <C-S-O> :call CocAction('runCommand', 'editor.action.organizeImport')<CR>
-
+  let g:coc_snippet_next = '<tab>'
+  inoremap <silent><expr> <TAB>
+    \ pumvisible() ? coc#_select_confirm() :
+    \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+    \ <SID>check_back_space() ? "\<TAB>" :
+    \ coc#refresh()
   function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~# '\s'
@@ -75,4 +61,7 @@ inoremap <silent><expr> <TAB>
 
   nmap <silent> <C-j> <Plug>(coc-cursors-word)*
   xmap <silent> <C-j> y/\V<C-r>=escape(@",'/\')<CR><CR>gN<Plug>(coc-cursors-range)gn
+
+  " coc-yank
+  nnoremap <silent> <space>y :<C-u>CocList -A --normal yank<cr>
 " }}

@@ -11,14 +11,10 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-commentary'
 " undotree
 Plug 'mbbill/undotree'
-" replace text with the contents of a register
-Plug 'vim-scripts/ReplaceWithRegister'
 " translate between multiline and single-line code
 Plug 'AndrewRadev/splitjoin.vim'
 " autocomplete quotes, parens, brackets, etc
 Plug 'Raimondi/delimitMate'
-" cut operation
-Plug 'svermeulen/vim-cutlass'
 
 " Browse
 " display indention levels
@@ -39,7 +35,6 @@ Plug 'vim-scripts/matchit.zip'
 Plug 'vim-scripts/restore_view.vim'
 " translate
 Plug 'voldikss/vim-translator'
-Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
 
 " Git
 " git wrapper
@@ -48,10 +43,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Lang
-" emmet
 Plug 'mattn/emmet-vim'
 Plug 'heavenshell/vim-jsdoc'
 Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
 
 " coc.vim
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

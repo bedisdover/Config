@@ -1,0 +1,14 @@
+{
+  // "tslint.configFile": "~/.vim/tslintRules.json",
+
+  // for any script (:
+  // "typescript.validate.enable": false,
+
+  "typescript.format.semicolons": "remove",
+  "typescript.format.insertSpaceAfterConstructor": true,
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+
+  "tslint.autoFixOnSave": true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true
+}

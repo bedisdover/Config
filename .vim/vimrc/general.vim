@@ -89,26 +89,6 @@ set foldlevelstart=99
 " syn region foldImports start="import" end=/import.*\sfrom\s('|").*\1\n$/ fold keepend
 " }}
 
-" highlighting {{
-hi CursorLine guibg=#3a3a3a
-hi CursorLineNr ctermbg=NONE guifg=NONE guibg=NONE
-hi FoldColumn guifg=#8e9292 guibg=#2b2b2b
-
-hi Special guifg=#cc7832
-hi tsxAttrib guifg=#999999
-
-hi typescriptTypeReference guifg=#507874
-hi! link typescriptTypeParameter typescriptTypeReference
-hi! link typescriptTypeArguments typescriptTypeReference
-" hi typescriptPredefinedType guifg=#cc7832
-hi typescriptCall guifg=#a9b7c6
-hi! link typescriptBOMWindowProp typescriptCall
-hi typescriptObjectLabel guifg=#9a60a8
-hi! link typescriptArrowFuncArg Normal
-" hi typescriptObjectLiteral guifg=#9a60a8
-" }}
-
-
 " fix tmux color {{
 if exists('$TMUX')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

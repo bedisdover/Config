@@ -31,7 +31,7 @@ set undodir=~/.undodir
 set fileformats=unix,dos
 set display+=lastline
 set formatoptions+=j
-set formatoptions+=o
+set formatoptions-=o
 set diffopt=vertical
 set path+=**
 set tags+=gems.tags,stdlib.tags
@@ -84,7 +84,7 @@ set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 set cursorline
 
 " folding
-set foldmethod=syntax
+" set foldmethod=syntax
 set foldlevelstart=99
 " syn region foldImports start="import" end=/import.*\sfrom\s('|").*\1\n$/ fold keepend
 " }}

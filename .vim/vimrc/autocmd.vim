@@ -7,7 +7,7 @@ autocmd BufReadPost *
 " support json with comment
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
-autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx
+autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx | set foldmethod=syntax
 
 " nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

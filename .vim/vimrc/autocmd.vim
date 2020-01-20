@@ -9,5 +9,7 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 
 autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescript.tsx | set foldmethod=syntax
 
+autocmd BufNewFile,BufRead *.s?css,*.html set foldmethod=indent
+
 " nerdtree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

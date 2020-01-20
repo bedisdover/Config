@@ -24,3 +24,14 @@
 " NerdTree {{
   let NERDTreeShowHidden=1
 " }}
+
+" emmet-vim {{
+  let g:user_emmet_settings = {
+  \  'typescript' : {
+  \    'extends' : 'jsx',
+  \  },
+  \  'typescript.tsx' : {
+  \    'extends' : 'jsx',
+  \  },
+  \}
+" }}

@@ -1,9 +1,5 @@
 {
-  // "tslint.configFile": "~/.vim/tslintRules.json",
-
-  // for any script (:
-  // "typescript.validate.enable": false,
-
+  "tsserver.log": "verbose",
   "typescript.format.semicolons": "remove",
   "typescript.format.insertSpaceAfterConstructor": true,
   "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
